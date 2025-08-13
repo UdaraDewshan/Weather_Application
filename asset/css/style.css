@@ -1,0 +1,11 @@
+.navbar {
+  background-color: rgba(5, 5, 5, 0.4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0px;
+}
+
+.con {
+  margin: 2px;
+  padding: 2px;
+}
