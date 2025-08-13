@@ -19,3 +19,39 @@
   object-fit: cover;
   z-index: -1;
 }
+
+.display{
+  margin-top: 60px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+
+.glass{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+
+.weather-icon{
+  height: 8vh;
+}
+
+.btn{
+  margin-right: 20px;
+}
+
+.icon{
+  height: 8vh;
+}
+
+.h3{
+  margin-top: 80px;
+}
