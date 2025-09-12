@@ -3,7 +3,7 @@ if (video) video.playbackRate = 0.5;
 
 AOS.init();
 
-const API_KEY = "b8aaf5746dba43bd82e114151252208";
+const API_KEY = "9e974afbbedb410a924182402251209";
 const BASE_URL = "https://api.weatherapi.com/v1/forecast.json";
 
 const form = document.getElementById("searchForm");
@@ -38,23 +38,23 @@ function renderWeather(data) {
     mapFrame.src = `https://www.google.com/maps?q=${location.lat},${location.lon}&z=10&output=embed`;
   }
 
-forecast.forecastday.forEach((day, idx) => {
-  const dayName = new Date(day.date).toLocaleDateString("en-US", { weekday: "long" });
+  forecast.forecastday.forEach((day, idx) => {
+    const dayName = new Date(day.date).toLocaleDateString("en-US", { weekday: "long" });
 
-  const dayEl = document.getElementById(`day-${idx + 1}`);
-  const iconEl = document.getElementById(`day-icon-${idx + 1}`);
-  const condEl = document.getElementById(`day-cond-${idx + 1}`);
-  const maxEl = document.getElementById(`day-max-${idx + 1}`);
-  const minEl = document.getElementById(`day-min-${idx + 1}`);
+    const dayEl = document.getElementById(`day-${idx + 1}`);
+    const iconEl = document.getElementById(`day-icon-${idx + 1}`);
+    const condEl = document.getElementById(`day-cond-${idx + 1}`);
+    const maxEl = document.getElementById(`day-max-${idx + 1}`);
+    const minEl = document.getElementById(`day-min-${idx + 1}`);
 
-  if (dayEl && iconEl && condEl && maxEl && minEl) {
-    dayEl.innerText = dayName;
-    iconEl.src = `https:${day.day.condition.icon}`;
-    condEl.innerText = day.day.condition.text;
-    maxEl.innerText = `${Math.round(day.day.maxtemp_c)}°C`;
-    minEl.innerText = `${Math.round(day.day.mintemp_c)}°C`;
-  }
-});
+    if (dayEl && iconEl && condEl && maxEl && minEl) {
+      dayEl.innerText = dayName;
+      iconEl.src = `https:${day.day.condition.icon}`;
+      condEl.innerText = day.day.condition.text;
+      maxEl.innerText = `${Math.round(day.day.maxtemp_c)}°C`;
+      minEl.innerText = `${Math.round(day.day.mintemp_c)}°C`;
+    }
+  });
 
 
   const hours = forecast.forecastday[0].hour;
